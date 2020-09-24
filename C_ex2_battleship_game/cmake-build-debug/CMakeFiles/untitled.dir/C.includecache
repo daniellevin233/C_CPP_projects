@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cs/usr/daniellevin/Desktop/ex_2/battleships.c
+battleships.h
+/cs/usr/daniellevin/Desktop/ex_2/battleships.h
+stdio.h
+-
+stdlib.h
+-
+memory.h
+-
+ctype.h
+-
+
+/cs/usr/daniellevin/Desktop/ex_2/battleships.h
+
+/cs/usr/daniellevin/Desktop/ex_2/battleships_game.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+battleships.h
+/cs/usr/daniellevin/Desktop/ex_2/battleships.h
+

@@ -1,0 +1,9 @@
+Test ended with status: [passed]
+Test ID: [8]
+Test name: [Same name]
+Test description: [Add file with two items with same name, print by name]
+
+Exit code was: [0]
+
+Output check: [passed]
+

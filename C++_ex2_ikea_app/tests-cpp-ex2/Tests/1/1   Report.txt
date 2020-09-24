@@ -1,0 +1,9 @@
+Test ended with status: [passed]
+Test ID: [1]
+Test name: [temp]
+Comment: [Fails on Windows, run on UNIX if possible.]
+
+Exit code was: [0]
+
+Output check: [passed]
+

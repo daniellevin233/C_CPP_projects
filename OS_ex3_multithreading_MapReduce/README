@@ -1,0 +1,32 @@
+daniellevin, matancha
+Daniel Levin (336462874), Matan Toledano (313591935)
+EX: 3
+
+FILES:
+MapReduceFramework.cpp - The map reduce library
+
+HARDWARE:
+run on aquarium platform, it seems that until about 20 threads the mission is benefiting from parallelization.
+At about 50, the number of threads needed to be created at the start and the frequent context switches between them
+makes the bigger number unhelpful. This may also depend on the input vector (here: 59) -
+if its size were bigger maybe the benefit of parallelization would still be retained for a bigger number
+of threads than 20.
+
+ANSWERS:
+Q1 - as shown in the Tirgul:
+Block Time (BT) - estimated averaged blocking time
+Service Time (ST) - estimated averaged processing time for a request
+The main balance is between too low number and in that case there will be low utilization of
+the CPU because of blocking operations, and too high number and in the case the many context switches will take away
+from the utilization of the CPU. BT/ST + 1 is a good estimator for the optimal num of threads, because if a single
+thread will utilize BT/(BT+ST) of the time the CPU, then another (ST-BT) threads will in average utilize the CPU
+fully, and will not over encumber the process.
+
+Q2 - 1. 2n, there are n threads and each thread creates a child process. The parent receives back from fork() pid != 0
+(the child process pid), while the child receives pid = 0. Therefore, only the parent process enters the if condition,
+and waits for the child. Meanwhile, the children processes run print a line and terminate. Waitpid() waits for child
+processes to terminate, once that happens all the parents threads will enter the barrier.
+The last thread to register in the barrier, will release all the other threads by using broadcast.
+Afterwards, all n threads will print a line. 2. (n!)^2, the child processes run first and can arrive there in any
+order depending on scheduling, total: n! options. Only after they finish, the parent processes enter a barrier and
+then exit. In the end, all n threads print the line in any order, total: n! options.

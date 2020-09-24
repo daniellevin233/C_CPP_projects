@@ -1,0 +1,9 @@
+Test ended with status: [passed]
+Test ID: [6]
+Test name: [Two adds]
+Test description: [Add file, print by id, add again, print by name]
+
+Exit code was: [0]
+
+Output check: [passed]
+

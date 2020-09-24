@@ -1,0 +1,10 @@
+Test ended with status: [skipped]
+Test ID: [7]
+Test name: [Three adds]
+Test description: [Add file, add again, add again, print by name]
+Comment: [School solution does not support that...]
+
+Exit code was: [null]
+
+Output check: [not_checked]
+

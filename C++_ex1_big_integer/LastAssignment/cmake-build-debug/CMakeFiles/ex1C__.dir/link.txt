@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ex1C__.dir/big_integer.cpp.o CMakeFiles/ex1C__.dir/my_set.cpp.o CMakeFiles/ex1C__.dir/big_int_tester.cpp.o  -o ex1C__ 

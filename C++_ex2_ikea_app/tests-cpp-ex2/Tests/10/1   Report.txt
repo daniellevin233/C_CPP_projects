@@ -1,0 +1,9 @@
+Test ended with status: [passed]
+Test ID: [10]
+Test name: [Sell continues in stock]
+Test description: [Add file, sell continues item]
+
+Exit code was: [0]
+
+Output check: [passed]
+

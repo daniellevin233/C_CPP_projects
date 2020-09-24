@@ -1,0 +1,112 @@
+#! /usr/bin/python3
+
+from subprocess import *
+import os
+import sys
+from shutil import copyfile
+
+# Extract files
+extracted_files = expected_files = str()
+run(["mkdir", "extracted"])
+try:
+	extracted_files = run(["tar", "-C", "extracted", "-xvf", sys.argv[1]], timeout=3, stdout=PIPE)
+	extracted_files = set(extracted_files.stdout.decode('utf-8').splitlines())
+	expected_files = {'reader.c', 'calculator.c', 'Makefile'}
+except TimeoutExpired:
+	print("Timeout error when extracting. Exiting.")
+	exit()
+
+# Verify files
+if extracted_files != expected_files:
+	print("Error! Files extracted from tar unexpected.")
+	exit()
+
+print("============================================")
+print("======                                ======")
+print("======   Successfully extracted tar   ======")
+print("======                                ======")
+print("============================================")
+print()
+print()
+
+# Copy provided files to extracted folder
+copyfile("/cs/course/2017/plabc/www/ex3/files/heat_eqn.c", "extracted/heat_eqn.c")
+copyfile("/cs/course/2017/plabc/www/ex3/files/heat_eqn.h", "extracted/heat_eqn.h")
+copyfile("/cs/course/2017/plabc/www/ex3/files/calculator.h", "extracted/calculator.h")
+copyfile("/cs/course/2017/plabc/www/ex3/files/output.csv", "extracted/output.csv")
+copyfile("/cs/course/2017/plabc/www/ex3/files/input.txt", "extracted/input.txt")
+
+os.chdir("extracted")
+
+# Compile file
+
+make_process = Popen("make", stderr=STDOUT)
+if make_process.wait() != 0:
+	print("=================================================")
+	print("=======                                   =======")
+	print("=======   Error! Unable to compile.       =======")
+	print("=======          Terminating              =======")
+	print("=======                                   =======")
+	print("=================================================")
+	exit(0)
+
+print("===============================================")
+print("======                                   ======")
+print("======  Successfully compiled program    ======")
+print("======  check if you got any warnings    ======")
+print("======                                   ======")
+print("===============================================")
+print()
+print()
+
+outFile = "output.csv"
+file = open(outFile, 'r')
+schoolOut = file.read().rstrip()
+file.close()
+studentSol = Popen(["./heatSolve", "input.txt"], stdout=PIPE, stdin=PIPE, stderr=PIPE)
+
+try:
+	studentOut = studentSol.communicate(timeout=3)[0].decode('utf-8').rstrip()
+	if studentOut != schoolOut:
+		print("Failed test")
+		print("School solution:\n", schoolOut, "\nStudent solution:\n", studentOut)
+	else:
+		print("===========================================")
+		print("======                               ======")
+		print("======  Successfully ran program     ======")
+		print("======                               ======")
+		print("===========================================")
+		print()
+		print()
+except TimeoutExpired:
+	print("Timeout running program")
+
+# check clean
+# clean provided files to extracted folder
+os.remove("heat_eqn.c")
+os.remove("heat_eqn.h")
+os.remove("calculator.h")
+os.remove("output.csv")
+os.remove("input.txt")
+Popen(["make", "clean"]).wait()
+remaining_files = set(check_output(["ls"]).decode('utf-8').splitlines())
+if remaining_files != expected_files:
+	print("================================================")
+	print("======                                    ======")
+	print("======                Error               ======")
+	print("======  Failure to clean generated files  ======")
+	print("======                                    ======")
+	print("================================================")
+	exit(0)
+
+print("=============================================")
+print("======                                 ======")
+print("====== Successfully cleaned everything ======")
+print("======                                 ======")
+print("=============================================")
+print()
+print()
+
+os.chdir("../")
+Popen(["rm", "-r", "extracted"]).wait()
+

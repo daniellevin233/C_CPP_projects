@@ -1,0 +1,23 @@
+Test ended with status: [passed]
+Test ID: [20]
+Test name: [Sell non-existing item]
+Test description: [Add file, sell non-existing item]
+
+Exit code was: [0]
+
+Output check: [passed]
+
+
+Error check: [passed]
+Added data: [found]
+Error check is of type [contains].
+Take a look at the output:
+
+Expected Error: [
+Product was not found.
+]
+
+User Error: [
+Product was not found.
+]
+

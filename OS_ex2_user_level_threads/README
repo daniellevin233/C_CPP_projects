@@ -1,0 +1,73 @@
+daniellevin, matancha
+Daniel Levin (336462874), Matan Toledano (313591935)
+EX: 2
+
+FILES:
+uthreads.cpp - The user-level threads library
+ThreadDescriptor.h - Class representing a thread's TCB
+ThreadDescriptor.c - implementation of ThreadDescriptor.h
+
+ANSWERS:
+
+Q1:
+Use Case: Web Server
+A main thread waits for user requests, and every time he gets one he opens for it a new thread
+and switches between threads every period of time.
+This method ensures that one request will not take up the whole CPU time (for example: infinite
+loop), and every other request will not wait too much. We get concurrency between all the users in
+the site. Kernel threads would also fit, and moreover blocking a thread will not
+result in block the whole process. Anyway we shouldn't forget that using kernel levels threads
+incurs a higher overhead because context switching is obtained using system calls which are more
+expensive.
+
+Q2:
+Advantages different Processes:
+1. Security. Threads can access other threads' memory addresses as they run under the same process,
+therefore if a malicious thread, for example,  decides to fill with 0s all of the memory addresses
+of the other threads he can do so. Processes cannot access other processes' memory interval as the
+CPU assures that will not happen.
+Disadvantages different Processes:
+1. Code Duplication. If the same code is present in a lot of the different tabs they have to
+duplicate it for each process, as they do not have shared memory. Kernel-level threads have a shared
+code in the memory and each can access it.
+2. High overhead. Context switching between processes requires more work than kernel level threads
+(saving address space, open files etc) thus incurring more overhead. Also creating a process is
+slower than creating a thread.
+3. Communication. Processes require the operating system to communicate (heavier), threads can do so
+at the user level.
+
+Q3:
+1st step: Writing the command kill -9 pid
+While writing the command 'kill -9 *pid*' in the shell, each time I pressed a key an interrupt from
+the keyboard occurred = a message was sent through the interrupt request lines (IRQ). The operating
+system got the interrupt, and saved the status of the process (in the memory) that was currently
+running on the CPU (register values, the program counter).
+The CPU checked the "interrupt vector table" what code needs to be executed after getting a keyboard
+interrupt. It executed the code which included sending the pressed key value to the screen, for
+displaying to the user and passing to the shell from which the key strokes were issued. After
+finishing the handling of each key stroke, the previous state was restored and the CPU's running
+time was given back to current running processes.
+2nd step: pressing enter
+After pressing enter, a keyboard interrupt was issued as described earlier. The shell regarded the
+string of key strokes pressed earlier as a command, and executes it using the code the OS provides
+it. Killing processes is a restricted command, therefore the running mode is changed to kernel mode
+(context switch to OS) - privileges are checked and when the command is deemed OK a SIGKILL signal
+is issued to the process *pid*. After context switching to pid, it immediately needs to handle the
+signal which instructs it to shut itself down - the program executed the code that is designed to
+handle the signal and after reporting success the OS removes it from the current processes, removing
+the PCB.
+
+Q4:
+The main difference between 'real' and 'virtual' alarm follows from how the operating system
+schedules the different processes: each process is given, periodically, a slot in the CPU to execute
+its commands. When the slot ends, the CPU will preempt the process in an action called a 'context
+switch'.
+When we want our process to be divided into user-level threads, and each thread to get the time
+allotted to it by our process, we would use 'virtual' alarms. Virtual alarms only count the time
+passed *while the process is executing commands in the CPU*. When the process is idle, or awaits a
+response from an I/O device - the thread is not executing commands and therefore we don't want it to
+count as part of its running time.
+A 'physical' alarm counts the continuous time that passes between starting it and the end of the
+interval of time it was defined with. We would use this alarm if we would want an action to occur at
+a usual interval (note that virtual is decided more by the scheduling of the OS), for example:
+deleting old files every hour.

@@ -1,0 +1,21 @@
+Test ended with status: [passed]
+Test ID: [14]
+Test description: [Add file, look for non-existing item name]
+
+Exit code was: [0]
+
+Output check: [passed]
+
+
+Error check: [passed]
+Added data: [found]
+Error check is of type [contains].
+Take a look at the output:
+
+Expected Error: [
+Item not found
+]
+
+User Error: [Item not found
+]
+

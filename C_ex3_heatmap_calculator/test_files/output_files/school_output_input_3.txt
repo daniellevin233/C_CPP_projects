@@ -1,0 +1,1 @@
+/bin/sh: school_reader: command not found

@@ -1,0 +1,20 @@
+Test ended with status: [passed]
+Test ID: [11]
+Test description: [Add file with invalid name]
+
+Exit code was: [0]
+
+Output check: [passed]
+
+
+Error check: [passed]
+Added data: [file]
+Error check is of type [contains].
+Take a look at the output:
+
+Expected Error: [Could not open file.
+]
+
+User Error: [Could not open file.
+]
+

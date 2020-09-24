@@ -1,0 +1,6 @@
+1
+Files/example.txt
+6
+902
+4.5
+7

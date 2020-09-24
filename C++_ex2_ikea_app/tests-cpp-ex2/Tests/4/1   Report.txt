@@ -1,0 +1,8 @@
+Test ended with status: [passed]
+Test ID: [4]
+Test description: [Add file, print by id]
+
+Exit code was: [0]
+
+Output check: [passed]
+

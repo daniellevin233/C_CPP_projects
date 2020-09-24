@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/untitled.dir/battleships.c.o CMakeFiles/untitled.dir/battleships_game.c.o  -o untitled 

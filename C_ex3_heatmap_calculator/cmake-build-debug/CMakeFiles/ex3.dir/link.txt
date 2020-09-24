@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/ex3.dir/heat_eqn.c.o CMakeFiles/ex3.dir/calculator.c.o CMakeFiles/ex3.dir/reader.c.o  -o ex3 

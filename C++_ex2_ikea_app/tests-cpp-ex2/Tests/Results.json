@@ -1,0 +1,639 @@
+[
+  {
+    "id": 1,
+    "name": "good",
+    "status": "passed",
+    "runnable": "ikea",
+    "skip": false,
+    "tests": [
+      {
+        "id": 1,
+        "name": "temp",
+        "status": "passed",
+        "type": "file",
+        "skip": false,
+        "comment": "Fails on Windows, run on UNIX if possible.",
+        "output_check": {
+          "type": "equals",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 2,
+        "description": "Add file, look for valid item id",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n2\n126\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog id: Item: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 3,
+        "description": "Add file, look for valid item name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n3\nJames Bond\n\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter product name: Item: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 4,
+        "description": "Add file, print by id",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n4\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 5,
+        "description": "Add file, print by name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 6,
+        "name": "Two adds",
+        "description": "Add file, print by id, add again, print by name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n4\n1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 205\nName: Ceramic knife \nQuantity: 200\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 7\nName: James Bond\nQuantity: 2\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 101.00\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 6.40\nPrice: 1.50\nCalories: 500.00\n-----\nItem: 126\nName: Wooden chair \nQuantity: 1000\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 7,
+        "name": "Three adds",
+        "description": "Add file, add again, add again, print by name",
+        "status": "skipped",
+        "type": "text",
+        "skip": true,
+        "comment": "School solution does not support that...",
+        "input": "1\nFiles/example.txt\n1\nFiles/example.txt\n1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "status": "not_checked"
+        },
+        "error_check": {
+          "type": "none",
+          "status": "not_checked"
+        },
+        "code_check": {
+          "type": "none",
+          "status": "not_checked"
+        },
+        "passed_checks": 0,
+        "failed_checks": 0
+      },
+      {
+        "id": 8,
+        "name": "Same name",
+        "description": "Add file with two items with same name, print by name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example1.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "product no. 6 already in stock with different type\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 9,
+        "name": "Sell discrete, in stock",
+        "description": "Add file, sell discrete item",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n6\n126\n200\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog number: Please enter number of items: Item: 126\nName: Wooden chair \nQuantity: 300\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 10,
+        "name": "Sell continues in stock",
+        "description": "Add file, sell continues item",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n6\n902\n1.5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog number: Please enter desired quantity: Item: 902\nName: Square candy \nQuantity: 1.70\nPrice: 1.50\nCalories: 500.00\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      }
+    ],
+    "passed_test": 9,
+    "failed_tests": 0,
+    "skipped_checks": 1
+  },
+  {
+    "id": 2,
+    "name": "bad",
+    "status": "passed",
+    "runnable": "ikea",
+    "skip": false,
+    "tests": [
+      {
+        "id": 11,
+        "description": "Add file with invalid name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nasdf\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "Could not open file.\n",
+          "actual": "Could not open file.\n",
+          "data": "file",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 12,
+        "description": "Add file, look for non-existing item id",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n2\n2346234\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog id: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "\nItem not found\n",
+          "actual": "Item not found\n",
+          "data": "found",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 13,
+        "description": "Add file, look for invalid item id (a string)",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n2\nasdf\n\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog id: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "\nNot valid input.\n",
+          "actual": "\nNot valid input\n",
+          "data": "valid",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 14,
+        "description": "Add file, look for non-existing item name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n3\nNothing like me\n\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter product name: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "\nItem not found\n",
+          "actual": "Item not found\n",
+          "data": "found",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 15,
+        "name": "Same id",
+        "description": "Add file with two items with same id, print by name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example2.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "exists",
+          "expected": "product no. 6 already in stock with different values\n",
+          "actual": "product no. 6 already in stock with different type\nFile format is invalid\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 16,
+        "name": "Print nothing by id",
+        "description": "Add nothing, print by id",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "4\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 17,
+        "name": "Print nothing by name",
+        "description": "Add nothing, print by name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "none",
+          "expected": "",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 18,
+        "name": "Sell discrete too much",
+        "description": "Add file, sell discrete item with non-existing amount",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n6\n126\n501\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog number: Please enter number of items: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "\nNot enough stock to sell.\n",
+          "actual": "\nNot enough stock to sell.\n",
+          "data": "Not enough stock to sell.",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 19,
+        "name": "Sell continues too much",
+        "description": "Add file, sell continues item with non-existing amount",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n6\n902\n4.5\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog number: Please enter desired quantity: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "\nNot enough stock to sell.\n",
+          "actual": "\nNot enough stock to sell.\n",
+          "data": "Not enough stock to sell.",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 20,
+        "name": "Sell non-existing item",
+        "description": "Add file, sell non-existing item",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "input": "1\nFiles/example.txt\n6\n12341234\n7\n",
+        "output_check": {
+          "type": "equals",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter catalog number: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "contains",
+          "expected": "\nProduct was not found.\n",
+          "actual": "\nProduct was not found.\n",
+          "data": "found",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      }
+    ],
+    "passed_test": 10,
+    "failed_tests": 0,
+    "skipped_checks": 0
+  },
+  {
+    "id": 3,
+    "name": "valgrind",
+    "status": "passed",
+    "runnable": "ikea",
+    "pre_args": [
+      "valgrind",
+      "--leak-check\u003dfull"
+    ],
+    "skip": false,
+    "tests": [
+      {
+        "id": 21,
+        "name": "Add and print",
+        "description": "Add file, print by id",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "comment": "Look at \u0027Error - User\u0027 file of this test to see your valgrind output.",
+        "input": "1\nFiles/example.txt\n4\n7\n",
+        "output_check": {
+          "type": "none",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "print",
+          "expected": "\u003d\u003d20468\u003d\u003d Memcheck, a memory error detector\n\u003d\u003d20468\u003d\u003d Copyright (C) 2002-2015, and GNU GPL\u0027d, by Julian Seward et al.\n\u003d\u003d20468\u003d\u003d Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info\n\u003d\u003d20468\u003d\u003d Command: /cs/usr/daniellevin/Desktop/ex2C++/tests-cpp-ex2/Base/ikea\n\u003d\u003d20468\u003d\u003d \n\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d HEAP SUMMARY:\n\u003d\u003d20468\u003d\u003d     in use at exit: 592 bytes in 9 blocks\n\u003d\u003d20468\u003d\u003d   total heap usage: 218,605 allocs, 218,596 frees, 1,405,849 bytes allocated\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 64 bytes in 1 blocks are definitely lost in loss record 1 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x1128D8: parseProductFloat(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:147)\n\u003d\u003d20468\u003d\u003d    by 0x11318C: parseCandie(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:208)\n\u003d\u003d20468\u003d\u003d    by 0x13AC5F: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:86)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 64 bytes in 1 blocks are definitely lost in loss record 2 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x11211A: parseProductInt(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:72)\n\u003d\u003d20468\u003d\u003d    by 0x1136E8: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:248)\n\u003d\u003d20468\u003d\u003d    by 0x114553: parseKitchenFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:351)\n\u003d\u003d20468\u003d\u003d    by 0x13ACE0: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:110)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 64 bytes in 1 blocks are definitely lost in loss record 3 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x11211A: parseProductInt(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:72)\n\u003d\u003d20468\u003d\u003d    by 0x114B12: parseMovieBook(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:395)\n\u003d\u003d20468\u003d\u003d    by 0x13AD0B: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:118)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 72 bytes in 1 blocks are definitely lost in loss record 4 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x11392F: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:262)\n\u003d\u003d20468\u003d\u003d    by 0x113D89: parseSittingFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:292)\n\u003d\u003d20468\u003d\u003d    by 0x13ACB5: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:102)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 72 bytes in 1 blocks are definitely lost in loss record 5 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x11392F: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:262)\n\u003d\u003d20468\u003d\u003d    by 0x114553: parseKitchenFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:351)\n\u003d\u003d20468\u003d\u003d    by 0x13ACE0: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:110)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 128 bytes in 2 blocks are definitely lost in loss record 6 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x1128D8: parseProductFloat(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:147)\n\u003d\u003d20468\u003d\u003d    by 0x112C69: parseClothe(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:170)\n\u003d\u003d20468\u003d\u003d    by 0x13AC34: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:78)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d 128 bytes in 2 blocks are definitely lost in loss record 7 of 7\n\u003d\u003d20468\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20468\u003d\u003d    by 0x11211A: parseProductInt(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:72)\n\u003d\u003d20468\u003d\u003d    by 0x1136E8: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:248)\n\u003d\u003d20468\u003d\u003d    by 0x113D89: parseSittingFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:292)\n\u003d\u003d20468\u003d\u003d    by 0x13ACB5: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:102)\n\u003d\u003d20468\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20468\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d LEAK SUMMARY:\n\u003d\u003d20468\u003d\u003d    definitely lost: 592 bytes in 9 blocks\n\u003d\u003d20468\u003d\u003d    indirectly lost: 0 bytes in 0 blocks\n\u003d\u003d20468\u003d\u003d      possibly lost: 0 bytes in 0 blocks\n\u003d\u003d20468\u003d\u003d    still reachable: 0 bytes in 0 blocks\n\u003d\u003d20468\u003d\u003d         suppressed: 0 bytes in 0 blocks\n\u003d\u003d20468\u003d\u003d \n\u003d\u003d20468\u003d\u003d For counts of detected and suppressed errors, rerun with: -v\n\u003d\u003d20468\u003d\u003d ERROR SUMMARY: 7 errors from 7 contexts (suppressed: 0 from 0)\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      },
+      {
+        "id": 22,
+        "name": "Two adds",
+        "description": "Add file, print by id, add again, print by name",
+        "status": "passed",
+        "type": "text",
+        "skip": false,
+        "comment": "Look at \u0027Error - User\u0027 file of this test to see your valgrind output.",
+        "input": "1\nFiles/example.txt\n4\n1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "none",
+          "expected": "1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 7\nName: James Bond\nQuantity: 1\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 126\nName: Wooden chair \nQuantity: 500\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\nItem: 205\nName: Ceramic knife \nQuantity: 100\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 50.50\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 3.20\nPrice: 1.50\nCalories: 500.00\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nplease enter file path: \n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\nItem: 205\nName: Ceramic knife \nQuantity: 200\nPrice: 5.00\nDimensions: 0.30 0.05 0.02\nCapacity: 0.00\n-----\nItem: 7\nName: James Bond\nQuantity: 2\nPrice: 9999.00\nAuthor: Ian Fleming \nYear of publication: 1962\nLength: 6540\n-----\nItem: 701\nName: Pajama cloth\nQuantity: 101.00\nPrice: 4.30\nWeight: 5.00\n-----\nItem: 902\nName: Square candy \nQuantity: 6.40\nPrice: 1.50\nCalories: 500.00\n-----\nItem: 126\nName: Wooden chair \nQuantity: 1000\nPrice: 25.00\nDimensions: 1.50 0.80 0.80\nMaterial: wood\nColor: Salmon\n-----\n\n1. Input stock from file\n2. Find item by catalog number\n3. Find item by name\n4. Print stock by catalog number\n5. Print stock by name\n6. Sell item\n7. Exit\n\n",
+          "status": "passed"
+        },
+        "error_check": {
+          "type": "print",
+          "expected": "\u003d\u003d20472\u003d\u003d Memcheck, a memory error detector\n\u003d\u003d20472\u003d\u003d Copyright (C) 2002-2015, and GNU GPL\u0027d, by Julian Seward et al.\n\u003d\u003d20472\u003d\u003d Using Valgrind-3.12.0.SVN and LibVEX; rerun with -h for copyright info\n\u003d\u003d20472\u003d\u003d Command: /cs/usr/daniellevin/Desktop/ex2C++/tests-cpp-ex2/Base/ikea\n\u003d\u003d20472\u003d\u003d \n\n\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d HEAP SUMMARY:\n\u003d\u003d20472\u003d\u003d     in use at exit: 1,640 bytes in 23 blocks\n\u003d\u003d20472\u003d\u003d   total heap usage: 437,202 allocs, 437,179 frees, 2,607,780 bytes allocated\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 64 bytes in 1 blocks are definitely lost in loss record 1 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x112DF7: parseClothe(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:185)\n\u003d\u003d20472\u003d\u003d    by 0x13AC34: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:78)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 72 bytes in 1 blocks are definitely lost in loss record 2 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x11331A: parseCandie(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:223)\n\u003d\u003d20472\u003d\u003d    by 0x13AC5F: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:86)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 80 bytes in 1 blocks are definitely lost in loss record 3 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x114728: parseKitchenFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:372)\n\u003d\u003d20472\u003d\u003d    by 0x13ACE0: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:110)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 104 bytes in 1 blocks are definitely lost in loss record 4 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x114F3A: parseMovieBook(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:446)\n\u003d\u003d20472\u003d\u003d    by 0x13AD0B: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:118)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 128 bytes in 2 blocks are definitely lost in loss record 5 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x1128D8: parseProductFloat(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:147)\n\u003d\u003d20472\u003d\u003d    by 0x11318C: parseCandie(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:208)\n\u003d\u003d20472\u003d\u003d    by 0x13AC5F: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:86)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 128 bytes in 2 blocks are definitely lost in loss record 6 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x11211A: parseProductInt(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:72)\n\u003d\u003d20472\u003d\u003d    by 0x1136E8: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:248)\n\u003d\u003d20472\u003d\u003d    by 0x114553: parseKitchenFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:351)\n\u003d\u003d20472\u003d\u003d    by 0x13ACE0: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:110)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 128 bytes in 2 blocks are definitely lost in loss record 7 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x11211A: parseProductInt(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:72)\n\u003d\u003d20472\u003d\u003d    by 0x114B12: parseMovieBook(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:395)\n\u003d\u003d20472\u003d\u003d    by 0x13AD0B: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:118)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 136 bytes in 1 blocks are definitely lost in loss record 8 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x1140DF: parseSittingFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:328)\n\u003d\u003d20472\u003d\u003d    by 0x13ACB5: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:102)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 144 bytes in 2 blocks are definitely lost in loss record 9 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x11392F: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:262)\n\u003d\u003d20472\u003d\u003d    by 0x113D89: parseSittingFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:292)\n\u003d\u003d20472\u003d\u003d    by 0x13ACB5: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:102)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 144 bytes in 2 blocks are definitely lost in loss record 10 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x11392F: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:262)\n\u003d\u003d20472\u003d\u003d    by 0x114553: parseKitchenFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:351)\n\u003d\u003d20472\u003d\u003d    by 0x13ACE0: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:110)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 256 bytes in 4 blocks are definitely lost in loss record 11 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x1128D8: parseProductFloat(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:147)\n\u003d\u003d20472\u003d\u003d    by 0x112C69: parseClothe(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:170)\n\u003d\u003d20472\u003d\u003d    by 0x13AC34: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:78)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d 256 bytes in 4 blocks are definitely lost in loss record 12 of 12\n\u003d\u003d20472\u003d\u003d    at 0x4C2C23F: operator new(unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)\n\u003d\u003d20472\u003d\u003d    by 0x11211A: parseProductInt(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:72)\n\u003d\u003d20472\u003d\u003d    by 0x1136E8: parseFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:248)\n\u003d\u003d20472\u003d\u003d    by 0x113D89: parseSittingFurniture(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ParseProducts.cpp:292)\n\u003d\u003d20472\u003d\u003d    by 0x13ACB5: StoreManager::parseProduct(std::vector\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e, std::allocator\u003cstd::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e \u003e \u003e) (ikea.cpp:102)\n\u003d\u003d20472\u003d\u003d    by 0x13B25F: StoreManager::readProducts(std::__cxx11::basic_string\u003cchar, std::char_traits\u003cchar\u003e, std::allocator\u003cchar\u003e \u003e) (ikea.cpp:152)\n\u003d\u003d20472\u003d\u003d    by 0x13C1BD: main (ikea.cpp:401)\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d LEAK SUMMARY:\n\u003d\u003d20472\u003d\u003d    definitely lost: 1,640 bytes in 23 blocks\n\u003d\u003d20472\u003d\u003d    indirectly lost: 0 bytes in 0 blocks\n\u003d\u003d20472\u003d\u003d      possibly lost: 0 bytes in 0 blocks\n\u003d\u003d20472\u003d\u003d    still reachable: 0 bytes in 0 blocks\n\u003d\u003d20472\u003d\u003d         suppressed: 0 bytes in 0 blocks\n\u003d\u003d20472\u003d\u003d \n\u003d\u003d20472\u003d\u003d For counts of detected and suppressed errors, rerun with: -v\n\u003d\u003d20472\u003d\u003d ERROR SUMMARY: 12 errors from 12 contexts (suppressed: 0 from 0)\n",
+          "status": "passed"
+        },
+        "code_check": {
+          "type": "none",
+          "expected": 0,
+          "actual": 0,
+          "status": "passed"
+        },
+        "passed_checks": 3,
+        "failed_checks": 0
+      }
+    ],
+    "test_timeout": 15000,
+    "passed_test": 2,
+    "failed_tests": 0,
+    "skipped_checks": 0
+  }
+]

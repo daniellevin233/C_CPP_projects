@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cs/usr/daniellevin/Desktop/ex2C++/ikea.cpp
+iostream
+-
+sstream
+-
+fstream
+-
+limits
+-
+vector
+-
+iterator
+-
+algorithm
+-
+cmath
+-
+

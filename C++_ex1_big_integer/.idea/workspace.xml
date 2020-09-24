@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80f9bf79-a3a4-4d1c-b373-f7a25fda4bf5" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ex1C__" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>suv</find>
+      <find>sub</find>
+      <find>divideMyStrs</find>
+      <find>myFabs</find>
+      <find>minAbsolute</find>
+      <find>(*this)</find>
+      <find>cleanZeroes</find>
+      <find>clean</find>
+      <find>NEGATIVE_SIGN</find>
+      <find>isInList</find>
+      <find>operator&lt;&lt;</find>
+      <find>isInSet</find>
+      <find>setNext</find>
+      <find>Is first big_integer BIGGER OR EQUAL TO second big_integer?</find>
+      <find>TRIVIAL CASE F</find>
+      <find>CALCULATION REPORT</find>
+      <find>&gt;=</find>
+      <find>TEST FAILED</find>
+      <find>onlyZeroes</find>
+      <find>contains</find>
+      <find>&lt;&lt;</find>
+      <find>failed</find>
+      <find>4.2</find>
+      <find>addToList</find>
+      <find>const_cast</find>
+      <find>moveNode</find>
+      <find>main</find>
+      <find>isI</find>
+      <find>isInS</find>
+      <find>12345678987654321</find>
+    </findStrings>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectId" id="1UzMXAAU21Q8VdHxXgVmwiBaKsI" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OS/ex1/main.cpp" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/../OS" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ex1C__" TARGET_NAME="ex1C__" RUN_TARGET_PROJECT_NAME="ex1C__" RUN_TARGET_NAME="ex1C__">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80f9bf79-a3a4-4d1c-b373-f7a25fda4bf5" name="Default" comment="" />
+      <created>1535029998810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535029998810</updated>
+      <workItem from="1535030000385" duration="390000" />
+      <workItem from="1535045957587" duration="7656000" />
+      <workItem from="1535123931850" duration="20271000" />
+      <workItem from="1535207675649" duration="1018000" />
+      <workItem from="1535214337371" duration="13124000" />
+      <workItem from="1535271511871" duration="7467000" />
+      <workItem from="1535279217680" duration="15573000" />
+      <workItem from="1535307434730" duration="8718000" />
+      <workItem from="1535359707463" duration="4625000" />
+      <workItem from="1535370719469" duration="5909000" />
+      <workItem from="1535389376407" duration="5841000" />
+      <workItem from="1535446248915" duration="40179000" />
+      <workItem from="1535532850017" duration="4225000" />
+      <workItem from="1535543680505" duration="14190000" />
+      <workItem from="1535573697435" duration="670000" />
+      <workItem from="1535616955940" duration="7981000" />
+      <workItem from="1535657964362" duration="3358000" />
+      <workItem from="1535732495907" duration="10934000" />
+      <workItem from="1535743445645" duration="2848000" />
+      <workItem from="1535797088948" duration="6767000" />
+      <workItem from="1539533978475" duration="2168000" />
+      <workItem from="1576355012614" duration="181000" />
+      <workItem from="1586976147504" duration="386000" />
+      <workItem from="1588410639216" duration="600000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/my_set_tester.cpp</url>
+          <line>448</line>
+          <option name="timeStamp" value="180" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/../test_files/big_int_tester.cpp</url>
+          <line>28</line>
+          <option name="timeStamp" value="186" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="CidrExceptionBreakpoint" />
+        <breakpoint enabled="true" type="javascript-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="this-&gt;_node_value._data._str" />
+        <watch expression="_head" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

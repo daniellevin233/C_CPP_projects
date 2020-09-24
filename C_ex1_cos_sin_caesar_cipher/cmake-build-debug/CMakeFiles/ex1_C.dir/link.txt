@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/ex1_C.dir/my_cos.c.o  -o ex1_C 

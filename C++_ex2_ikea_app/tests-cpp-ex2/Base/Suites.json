@@ -1,0 +1,231 @@
+[
+  {
+    "skip": false,
+    "name": "good",
+    "runnable": "ikea",
+    "tests": [
+      {
+        "skip": false,
+        "comment": "Fails on Windows, run on UNIX if possible.",
+        "name": "temp",
+        "type": "file",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "description": "Add file, look for valid item id",
+        "input": "1\nFiles/example.txt\n2\n126\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "description": "Add file, look for valid item name",
+        "input": "1\nFiles/example.txt\n3\nJames Bond\n\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "description": "Add file, print by id",
+        "input": "1\nFiles/example.txt\n4\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "description": "Add file, print by name",
+        "input": "1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "name": "Two adds",
+        "description": "Add file, print by id, add again, print by name",
+        "input": "1\nFiles/example.txt\n4\n1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "skip": true,
+        "comment": "School solution does not support that...",
+        "name": "Three adds",
+        "description": "Add file, add again, add again, print by name",
+        "input": "1\nFiles/example.txt\n1\nFiles/example.txt\n1\nFiles/example.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "name": "Same name",
+        "description": "Add file with two items with same name, print by name",
+        "input": "1\nFiles/example1.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "name": "Sell discrete, in stock",
+        "description": "Add file, sell discrete item",
+        "input": "1\nFiles/example.txt\n6\n126\n200\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "name": "Sell continues in stock",
+        "description": "Add file, sell continues item",
+        "input": "1\nFiles/example.txt\n6\n902\n1.5\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      }
+    ]
+  },
+  {
+    "skip": false,
+    "name": "bad",
+    "runnable": "ikea",
+    "tests": [
+      {
+        "description": "Add file with invalid name",
+        "input": "1\nasdf\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "file"
+        }
+      },
+      {
+        "description": "Add file, look for non-existing item id",
+        "input": "1\nFiles/example.txt\n2\n2346234\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "found"
+        }
+      },
+      {
+        "description": "Add file, look for invalid item id (a string)",
+        "input": "1\nFiles/example.txt\n2\nasdf\n\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "valid"
+        }
+      },
+      {
+        "description": "Add file, look for non-existing item name",
+        "input": "1\nFiles/example.txt\n3\nNothing like me\n\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "found"
+        }
+      },
+      {
+        "name": "Same id",
+        "description": "Add file with two items with same id, print by name",
+        "input": "1\nFiles/example2.txt\n5\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "exists"
+        }
+      },
+      {
+        "name": "Print nothing by id",
+        "description": "Add nothing, print by id",
+        "input": "4\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "name": "Print nothing by name",
+        "description": "Add nothing, print by name",
+        "input": "5\n7\n",
+        "output_check": {
+          "type": "equals"
+        }
+      },
+      {
+        "name": "Sell discrete too much",
+        "description": "Add file, sell discrete item with non-existing amount",
+        "input": "1\nFiles/example.txt\n6\n126\n501\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "Not enough stock to sell."
+        }
+      },
+      {
+        "name": "Sell continues too much",
+        "description": "Add file, sell continues item with non-existing amount",
+        "input": "1\nFiles/example.txt\n6\n902\n4.5\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "Not enough stock to sell."
+        }
+      },
+      {
+        "name": "Sell non-existing item",
+        "description": "Add file, sell non-existing item",
+        "input": "1\nFiles/example.txt\n6\n12341234\n7\n",
+        "output_check": {
+          "type": "equals"
+        },
+        "error_check": {
+          "type": "contains",
+          "data": "found"
+        }
+      }
+    ]
+  },
+  {
+    "name": "valgrind",
+    "pre_args": [
+      "valgrind",
+      "--leak-check=full"
+    ],
+    "test_timeout": 15000,
+    "runnable": "ikea",
+    "tests": [
+      {
+        "name": "Add and print",
+        "comment": "Look at 'Error - User' file of this test to see your valgrind output.",
+        "description": "Add file, print by id",
+        "input": "1\nFiles/example.txt\n4\n7\n",
+        "error_check": {
+          "type": "print"
+        }
+      },
+      {
+        "name": "Two adds",
+        "comment": "Look at 'Error - User' file of this test to see your valgrind output.",
+        "description": "Add file, print by id, add again, print by name",
+        "input": "1\nFiles/example.txt\n4\n1\nFiles/example.txt\n5\n7\n",
+        "error_check": {
+          "type": "print"
+        }
+      }
+    ]
+  }
+]

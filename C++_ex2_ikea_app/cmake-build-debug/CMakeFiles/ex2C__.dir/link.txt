@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/ex2C__.dir/ikea.cpp.o  -o ex2C__ 

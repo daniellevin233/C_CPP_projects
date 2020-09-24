@@ -1,0 +1,23 @@
+Test ended with status: [passed]
+Test ID: [18]
+Test name: [Sell discrete too much]
+Test description: [Add file, sell discrete item with non-existing amount]
+
+Exit code was: [0]
+
+Output check: [passed]
+
+
+Error check: [passed]
+Added data: [Not enough stock to sell.]
+Error check is of type [contains].
+Take a look at the output:
+
+Expected Error: [
+Not enough stock to sell.
+]
+
+User Error: [
+Not enough stock to sell.
+]
+

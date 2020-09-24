@@ -1,0 +1,6 @@
+1
+Files/example.txt
+6
+126
+501
+7

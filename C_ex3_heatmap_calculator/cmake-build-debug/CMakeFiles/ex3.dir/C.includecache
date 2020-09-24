@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cs/usr/daniellevin/Desktop/ex3C/calculator.c
+stdio.h
+-
+math.h
+-
+calculator.h
+/cs/usr/daniellevin/Desktop/ex3C/calculator.h
+
+/cs/usr/daniellevin/Desktop/ex3C/calculator.h
+stdlib.h
+-
+
+/cs/usr/daniellevin/Desktop/ex3C/heat_eqn.c
+
+/cs/usr/daniellevin/Desktop/ex3C/heat_eqn.h
+
+/cs/usr/daniellevin/Desktop/ex3C/reader.c
+stdio.h
+-
+string.h
+-
+heat_eqn.h
+/cs/usr/daniellevin/Desktop/ex3C/heat_eqn.h
+calculator.h
+/cs/usr/daniellevin/Desktop/ex3C/calculator.h
+

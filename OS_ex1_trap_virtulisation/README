@@ -1,0 +1,21 @@
+daniellevin, matancha
+Daniel Levin (336462874), Matan Toledano (313591935)
+EX: 1
+
+FILES:
+osm.cpp -- implementation of osm.h
+osm.h -- a header file for function measuring running time for single instruction, function call
+   & trap
+
+ANSWERS:
+
+Q1:
+The program WhatIDo requires a single argument and performs the following code:
+  - From the relative path the program is run, creates ./Welcome, ./WelcomeTo
+  - Creates a new file ./Welcome/To/OS2020
+  - Checks if the program has writing permissions
+  - Writes to the file OS2020: "%username%\nIf you haven't read the course guidelines yet --- do it
+  right now!\n1"
+  - Closes the file
+  - removes the file & directories created during the run
+  - the program finishes

@@ -1,0 +1,23 @@
+{
+  "title": "CPP Ex2 Tests",
+  "windows_extension": ".exe",
+  "unix_extension": "",
+  "cmd_timeout": 10000,
+  "test_timeout": 400,
+  "diff_timeout": 500,
+  "diff_args": [
+    "-B",
+    "-s"
+  ],
+  "generate_commands": [
+    "cp -ru /cs/course/current/plabcpp/www/ex2/school_sol.tar %BASE%/School/school_sol.tar",
+    "cp -ru /cs/course/current/plabcpp/www/ex2/tests_examples.tar %BASE%/School/tests_examples.tar",
+    "tar -xvf %BASE%/School/school_sol.tar -C %BASE%/",
+    "tar -xvf %BASE%/School/tests_examples.tar -C %FILES%/"
+  ],
+  "run_commands": [
+     "make clean",
+     "make all",
+     "cp ex2 %TESTS%/ikea"
+  ]
+}

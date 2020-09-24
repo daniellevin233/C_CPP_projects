@@ -1,0 +1,21 @@
+Test ended with status: [passed]
+Test ID: [15]
+Test name: [Same id]
+Test description: [Add file with two items with same id, print by name]
+
+Exit code was: [0]
+
+Output check: [passed]
+
+
+Error check: [passed]
+Error check is of type [exists].
+Take a look at the output:
+
+Expected Error: [product no. 6 already in stock with different values
+]
+
+User Error: [product no. 6 already in stock with different type
+File format is invalid
+]
+

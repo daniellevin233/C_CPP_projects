@@ -1,0 +1,21 @@
+V.3:
+	- Easier error checks.
+	- Better reports.
+
+V.4:
+	- Added some tests
+	- Full report save
+	- Changed files format
+
+V.5:
+	- Added sell tests
+	- Another format change
+
+V.6:
+	- Better reports
+
+V.7:
+	- Added valgrind tests
+
+V.8
+	- Small changes

@@ -1,0 +1,9 @@
+Test ended with status: [passed]
+Test ID: [16]
+Test name: [Print nothing by id]
+Test description: [Add nothing, print by id]
+
+Exit code was: [0]
+
+Output check: [passed]
+

@@ -1,0 +1,52 @@
+
+
+---------------------------------------------------------------
+                          CPP Ex2 Tests
+---------------------------------------------------------------
+
+Running: make clean
+Running: make all
+Running: cp ex2 /cs/usr/daniellevin/Desktop/ex2C++/tests-cpp-ex2/Tests/ikea
+
+       --- Starting suite [good]
+              - Test [1] has passed!
+                      Comment: Fails on Windows, run on UNIX if possible.
+              - Test [2] has passed!
+              - Test [3] has passed!
+              - Test [4] has passed!
+              - Test [5] has passed!
+              - Test [6] has passed!
+              - Test [7] marked as skipped.
+                      Comment: School solution does not support that...
+              - Test [8] has passed!
+              - Test [9] has passed!
+              - Test [10] has passed!
+       --- Suite [good] has passed!
+       --- Stats: [9] passed, [1] skipped, and [0] failed out of [10] tests total.
+
+       --- Starting suite [bad]
+              - Test [11] has passed!
+              - Test [12] has passed!
+              - Test [13] has passed!
+              - Test [14] has passed!
+              - Test [15] has passed!
+              - Test [16] has passed!
+              - Test [17] has passed!
+              - Test [18] has passed!
+              - Test [19] has passed!
+              - Test [20] has passed!
+       --- Suite [bad] has passed!
+       --- Stats: [10] passed, [0] skipped, and [0] failed out of [10] tests total.
+
+       --- Starting suite [valgrind]
+              - Test [21] has passed!
+                      Comment: Look at 'Error - User' file of this test to see your valgrind output.
+              - Test [22] has passed!
+                      Comment: Look at 'Error - User' file of this test to see your valgrind output.
+       --- Suite [valgrind] has passed!
+       --- Stats: [2] passed, [0] skipped, and [0] failed out of [2] tests total.
+
+
+Run finished, all tests have passed!
+Stats: [21] passed, [1] skipped, and [0] failed out of [22] tests total.
+

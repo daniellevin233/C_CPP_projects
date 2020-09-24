@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cs/usr/daniellevin/Desktop/ex1C++/LastAssignment/big_integer.h
+string
+-
+
+/cs/usr/daniellevin/Desktop/ex1C++/LastAssignment/my_set.cpp
+iostream
+-
+my_set.h
+/cs/usr/daniellevin/Desktop/ex1C++/LastAssignment/my_set.h
+big_integer.h
+/cs/usr/daniellevin/Desktop/ex1C++/LastAssignment/big_integer.h
+
+/cs/usr/daniellevin/Desktop/ex1C++/LastAssignment/my_set.h
+big_integer.h
+/cs/usr/daniellevin/Desktop/ex1C++/LastAssignment/big_integer.h
+

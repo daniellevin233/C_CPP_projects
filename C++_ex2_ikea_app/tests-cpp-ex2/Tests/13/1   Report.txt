@@ -1,0 +1,22 @@
+Test ended with status: [passed]
+Test ID: [13]
+Test description: [Add file, look for invalid item id (a string)]
+
+Exit code was: [0]
+
+Output check: [passed]
+
+
+Error check: [passed]
+Added data: [valid]
+Error check is of type [contains].
+Take a look at the output:
+
+Expected Error: [
+Not valid input.
+]
+
+User Error: [
+Not valid input
+]
+
